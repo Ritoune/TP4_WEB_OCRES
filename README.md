@@ -1,70 +1,41 @@
-# Getting Started with Create React App
+TP 3: Facebook ultra lite
+A lire impérativement avant de commencer quoi que ce soit, ce sont les règles que vous devrez appliquer tout au long du semestre:
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Règles pour le semestre
 
-## Available Scripts
+Instructions
+capture
 
-In the project directory, you can run:
+Le but de ce TP est de reproduire un site identique à l'image grâce à React. Avant toute chose, analysez cette image et reflechissez aux composants et aux containers que vous pourriez créer
 
-### `yarn start`
+Ce site contient à minima 2 composants et un container
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Les trois boutons en haut à droite servent à switcher entre les differents profils qui seront définis et stockés à travers un objet javascript.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+Par exemple:
 
-### `yarn test`
+const profils = [
+  {
+    nom: bob
+  },
+  {
+    nom: martine
+  },
+  {
+    nom: camille
+  }
+];
+Le bouton change style permet de changer la couleur de background de la carte de profil
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Chaque profil contient au moins les informations suivantes:
 
-### `yarn build`
+prénom
+nom
+date de naissance
+image de profil
+Chaque profil contient aussi la dernière publication de l'utilisateur
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Lorsque l'on switche d'un utilisateur à l'autre toutes les informations sont mises à jour.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Bonus:
+Lorsque l'utilisateur clique sur le bouton "C'est super !", il vient augmenter le nombre de "C'est super!" qu'on affichera à coté du bouton. Ce nombre sera stocké dans le profil de l'utilisateur ce qui permettra de la conserver lorsqu'on switchera d'utilisateur.
